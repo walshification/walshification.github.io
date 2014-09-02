@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Home
+title: Walshification
 ---
 
 
@@ -8,23 +7,9 @@ title: Home
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Walshification</title>
+  <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<style type="text/css">
-    body{
-    	margin-top: 70px;
-    }
-		#sidebar{
-			width: 200px;
-			float: right;
-		}
-		#footer{
-			clear: both;
-		}
-		footer{
-			margin-left: 20px;
-		}
 	</style>
 </head>
 <body>
@@ -39,7 +24,7 @@ title: Home
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="navbar-brand" href="#">Walshification</a>
+        <a class="navbar-brand" href="#">{{ page.title }}</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -52,15 +37,22 @@ title: Home
   </div>
 </nav>
 <div class="container">
+
+	<!-- Jumbotron header -->
 	<div class="jumbotron">
-		<h1>Walshification <small>My programming blog</small></h1>
+		<h1>{{ page.title }} <small>My programming blog</small></h1>
 		<p>Hello, world! This site is hosted with Github Pages.</p>
 	</div>
 	<div class="row">
+	
+		<!-- Post content -->
 		<div class="col-md-8">
 			<h1>Latest Posts</h1>
 		</div>
+		
+		<!-- Sidebar -->
 		<div class="col-md-4">
+			
 			<div class="well text-center">
         <p class="lead">
           Click the button to subscribe!
@@ -82,7 +74,9 @@ title: Home
 				<div class="panel-body">
 					list of categories
 				</div>
+			</div>
 		</div>
+	<!-- Footer -->
 	<hr id="footer">
 	<div class="row">
 		<div class="col-small-12">

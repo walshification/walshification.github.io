@@ -1,0 +1,26 @@
+<div class="col-md-4">
+	<div class="well text-center">
+    <p class="lead">
+      Click the button to subscribe!
+    </p>
+    <button class="btn btn-primary btn-lg">Subscribe</button>
+	</div>
+	<div class="panel panel-default"> 
+		<div class="panel-heading"> 
+			<h4 class="panel-title">Recent Posts</h4> 
+		</div>
+		<div class="panel-body"> 
+			{% for post in site.posts %}
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel title">Categories</h4>
+		</div>
+		<div class="panel-body">
+			list of categories
+		</div>
+	</div>
+</div>

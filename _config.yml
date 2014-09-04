@@ -2,7 +2,21 @@ name: "Walshification"
 description: "My programming blog."
 avatar: https://avatars0.githubusercontent.com/u/5120876?v=2&s=460
 
-url: "http://localhost:4000"
+footer-links:
+	email: walshification@gmail.com
+  flickr: 
+  github: walshification
+  linkedin: 
+  rss: 
+  twitter: walshification
+  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+
+disqus: 
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: 
+
+url: "walshification.github.io"
 
 paginate: 10
 

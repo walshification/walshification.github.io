@@ -3,9 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>{{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	</style>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 </head>
 <body>
 	<!-- Navbar -->
@@ -21,7 +19,9 @@
 	
 		<!-- Post content -->
 			<div class="col-md-8">
-				{{ content }}
+				<section class="content">
+					{{ content }}
+				</section>
 			</div>
 		
 			<!-- Sidebar -->

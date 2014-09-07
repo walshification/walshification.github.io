@@ -1,5 +1,5 @@
 title: "Walshification"
-description: "My programming blog."
+description: "My coding blog."
 avatar: https://avatars0.githubusercontent.com/u/5120876?v=2&s=460
 encoding: utf-8
 
@@ -18,7 +18,7 @@ google_analytics:
 
 url: walshification.github.io
 
-paginate: 10
+paginate: 5
 
 markdown: rdiscount
 permalink: pretty

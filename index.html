@@ -4,10 +4,10 @@ title: Walshification
 ---
 
 
-	<h1>Latest Posts</h1>
 	<div id="main" role="main" class="container">
-		{% for post in site.posts %}
-			<a href="{{ post.url }}">{{ post.title }}</a>
-				{{ post.excerpt }}
+		{% for post in paginator.posts %}
+			<a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+			<h4>{{ post.date | date: "%B %-d, %Y" }}</h4>
+			{{ post.excerpt }}
 		{% endfor %}
 	</div>

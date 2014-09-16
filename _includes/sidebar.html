@@ -19,6 +19,11 @@
 		<h4 class="panel-title">Categories</h4>
 	</div>
 	<div class="panel-body">
-		list of categories
+		{% for category in site.categories %}
+			<a href="/category/{{ category | first | slugize }}">
+				{{ category | first }}
+			</a>
+			<br>
+		{% endfor %}
 	</div>
 </div>

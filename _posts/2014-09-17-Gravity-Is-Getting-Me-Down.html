@@ -4,5 +4,63 @@ title: Gravity Is Getting Me Down
 category: Pre-work
 ---
 
+<figure align="center">
+  <img title="gravity" alt="A lone astronaut floats out into space distraught" 
+  src="/assets/gravity.jpg" />
+  <figcaption>
+    Gravity's a real downer.
+  </figcaption>
+</figure>
 <p>I have encountered my first real roadblock in the coding world since starting
- ACLTC: Gravity.</p>
+ ACLTC: Gravity. One of the prework assignments was to recreate a version of 
+Connect Four that could be played on the console. But I can't get gravity to 
+work.</p>
+
+<!-- more -->
+
+<p>We were instructed to use an array of arrays for the gameboard; easy enough. 
+I was able to generate the gameboard and define methods to control the flow of
+turns.</p>
+
+<p>I can get a piece to appear in the right spot when a player takes a first 
+turn. But getting a piece to fall to the bottom after that is proving to be a 
+sticky problem. And if it does fall properly, it has a tendency to overlap a 
+piece that is already at the bottom, instead of stopping at the slot above.</p>
+
+<p>I emailed Jay, the instructor, with my dilemma. He didn't give me the 
+solution, but he did point me in the right direction. He suggested, instead of 
+creating a method that replicated the advancement of a user's X through the 
+gameboard in its logic, it work backwards, from the bottom up, checking first 
+if the bottom space was occupied and moving up as needed.</p>
+
+<p>With that in mind, I was able to come up with the following:</p>
+
+{% highlight ruby %}
+def turn(board, prompt)
+
+state(board)
+puts prompt
+x = gets.chomp.to_i - 1
+y = 6 
+
+until board[y][x] != "X" || y == 0
+  y -= 1
+end
+
+if y < 0
+  return turn(board, "Try again. Choose a different column 1-7.")
+else
+  board[y].delete_at(x)
+  board[y].insert(x, "X")
+  puts "Good move!"
+end
+
+end
+{% endhighlight %}
+
+<p>Nothing groundbreaking for sure -- my program isn't even the complete game 
+-- but the salient point is this: A program doesn't need to replicate a real 
+world analog; it just needs to look like it did. Code the easiest route, not 
+the route closest to "realism." It's an important point that will keep you from 
+trying to create the environment in which the wheel was invented so that you 
+can reinvent it.</p>

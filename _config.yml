@@ -1,6 +1,6 @@
 title: "Walshification"
 description: "My coding blog."
-avatar: https://avatars0.githubusercontent.com/u/5120876?v=2&s=460
+avatar: "https://avatars0.githubusercontent.com/u/5120876?v=2&s=460"
 encoding: utf-8
 
 footer-links:
@@ -16,7 +16,7 @@ disqus:
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: 
 
-url: walshification.github.io
+url: walshification.com
 
 paginate: 5
 

@@ -4,11 +4,10 @@
   <meta charset="utf-8">
   <title>{{ site.title }}</title>
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/custom.css">
   <script type="text/javascript">
-  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-  var disqus_shortname = 'walshification'; // required: replace example with your forum shortname
+  var disqus_shortname = 'walshification';
 
-  /* * * DON'T EDIT BELOW THIS LINE * * */
   (function () {
       var s = document.createElement('script'); s.async = true;
       s.type = 'text/javascript';
@@ -21,7 +20,7 @@
 	<!-- Navbar -->
 	{% include navbar.html %}
 	
-	<div class="container">
+	<div id="header" class="container">
 		<!-- Jumbotron -->
 		<div class="jumbotron">
 			<h1>{{ site.title }} <small>{{ site.description }}</small></h1>

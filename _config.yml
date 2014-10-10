@@ -4,7 +4,7 @@ disqus_shortname: walshification
 reading_time:     true
 words_per_minute: 200
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              walshification.com
+url:              http://walshification.com
 
 # Owner/author information
 owner:
@@ -21,7 +21,7 @@ owner:
   instagram:      
   flickr:         
   tumblr:         
-  google_plus:    +102574642414834089076
+  google_plus:    +ChrisWalsh_walshification_42
 
 # Background image to be tiled on all pages
 background: 

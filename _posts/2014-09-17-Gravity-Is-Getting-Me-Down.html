@@ -6,7 +6,7 @@ category: Pre-work
 
 <figure align="center">
   <img title="gravity" alt="A lone astronaut floats out into space distraught" 
-  src="/images/gravity.jpg" />
+  src="/assets/gravity.jpg" />
   <figcaption>
     Gravity's a real downer.
   </figcaption>
@@ -35,27 +35,29 @@ if the bottom space was occupied and moving up as needed.</p>
 
 <p>With that in mind, I was able to come up with the following:</p>
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
+
 def turn(board, prompt)
 
-state(board)
-puts prompt
-x = gets.chomp.to_i - 1
-y = 6 
+	state(board)
+	puts prompt
+	x = gets.chomp.to_i - 1
+	y = 6 
 
-until board[y][x] != "X" || y == 0
-  y -= 1
+	until board[y][x] != "X" || y == 0
+		y -= 1
+	end
+
+	if y < 0
+		return turn(board, "Try again. Choose a different column 1-7.")
+	else
+		board[y].delete_at(x)
+		board[y].insert(x, "X")
+		puts "Good move!"
+	end
+
 end
 
-if y < 0
-  return turn(board, "Try again. Choose a different column 1-7.")
-else
-  board[y].delete_at(x)
-  board[y].insert(x, "X")
-  puts "Good move!"
-end
-
-end
 {% endhighlight %}
 
 <p>Nothing groundbreaking for sure -- my program isn't even the complete game 

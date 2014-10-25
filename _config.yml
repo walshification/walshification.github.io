@@ -23,8 +23,12 @@ owner:
   tumblr:         
   google_plus:    +ChrisWalsh_walshification_42
 
+<<<<<<< HEAD
 # Background image to be tiled on all pages
 background: 
+=======
+disqus: 
+>>>>>>> parent of 056f528... font/layout experiments
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-55609412-1
@@ -53,6 +57,7 @@ permalink:   /:categories/:title/
 # Amount of post to show on home page
 paginate: 5
 
+<<<<<<< HEAD
 kramdown:
   auto_ids: true
   footnote_nr: 1
@@ -69,3 +74,8 @@ kramdown:
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+=======
+markdown: rdiscount
+permalink: pretty
+highlighter: pygments
+>>>>>>> parent of 056f528... font/layout experiments

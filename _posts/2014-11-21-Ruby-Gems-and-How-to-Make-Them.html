@@ -1,0 +1,84 @@
+---
+layout: post
+title: "Ruby Gems and How to Make Them"
+---
+
+<figure align="center">
+  <img title="Winza rubies" alt="A group of Winza ruby and sapphire crystal specimens collected by Vincent Pardieu while visiting the Winza gem mining area in 2008 associated with two beautiful faceted rubies seen in Paris." 
+  src="/assets/images/gems-Winza5499okGG.jpg" />
+  <figcaption>
+    
+  </figcaption>
+</figure>
+
+<p>A gem, in the Ruby sense, is a prepackaged program or library designed for easy installation within a system or application. <a href="http://rubygems.org/">RubyGems</a> is package manager, repository, and your soon-to-be best friend behind the implimentation of these gems. I was using gems long before I understood what they really were, and today, we'll go over the process of creating and accessing our very own.</p>
+
+<!-- more -->
+
+<h2>Step 1: Create an Account on Ruby Gems dot Org</h2>
+
+<p>The first thing we'll need to do is hop over to the <a href="https://rubygems.org/sign_up">RubyGems signup page</a> and create a new account. This is our gem mine, containing thousands of gems of varying degrees of usefulness. All we need right now is a user account, but feel free to twiddle through the gem index.</p>
+
+<p>After you create your account, hop back over to you terminal and login by typing <code>gem push</code>. You'll get an error, because we haven't specified a gem name, but that's fine as long as it says "Signed in" above that error.</p>
+
+<h2>Step 2: Generate Your Gem on the Command Line</h2>
+
+<p>Do a quick search on RubyGems to make sure no one has used your name of choice before. They have some <a href="http://guides.rubygems.org/name-your-gem/">recommendations</a> for naming conventions that will help organize your gem for both you and any users who try to use it. I will assume you're going to follow their advice.</p>
+
+<p>Back in the command line, type</p>
+
+<code>bundle gem example_name</code>
+<br /><br />
+<p>where <code>example_name</code> is the name of your gem. That creates the shell of our gem as well as initiates a github repository in the project folder. The folder structure of all gems is as follows:</p>
+
+<pre>
+  <code>
+    example_gem/
+    ├── lib/
+    │   └── example_gem.rb
+    ├── README
+    ├── Rakefile
+
+    └── example_gem.gemspec
+  </code>
+</pre>
+
+<code>cd</code> into the parent folder and let's look at the good stuff.</p>
+
+<h2>Step 3: Edit the Gemspec and README</h2>
+
+<p>Open the gemspec file in your preferred text editor. It'll look something like this:</p>
+
+{% gist 2494dac3ed1d65b7c1e1 %}
+
+<p>The <code>spec.summary</code> is our first stop. Replace the contents of the curly brackets with a summary of what your gem is designed to do. Expand on that with a more in-depth explanation of its fuctionality in the <code>spec.description</code>. Be sure in both cases to remove the "TODO" as this will create havoc with your gem.</p>
+
+<p>With the summary and description out of the way, we can add any dependencies that our gem might need. Think of dependencies as gems for your gem. For instance, if we wanted our gem to make api calls with Unirest, we'd throw <code>spec.add_dependency "unirest"</code> right above the <code>spec.add_development_dependency "bundler", "~> 1.6"</code> at line 21. Remember to <code>bundle</code> after all your dependencies are added.</p>
+
+<p>Next is the README. I know; I know. You don't want to write it. I don't either, but we've all bashed our heads against our keyboards, trying to install something that incomplete documentation, what was there crafted in hieroglyphics without a Rosetta Stone in sight. And we have all shook our fists at the heavens, gnashing our teeth and cursing the nerd who thought the installation, configuration, and implementation processes were <em>so obvious</em> that a decent README wasn't necessary. <strong>Do not be that nerd.</strong> Take the ten minutes to write a decent README. This will also help us think about what we're about to code, the structure we'll want to achieve. This will help you; it will help me; it will help those who come after us. Do it for everyone.</p>
+
+<p>The README will be in Markdown. <a href="http://dillinger.io/">Dillinger</a> and <a href="https://stackedit.io/">StackEdit</a> are both easy-to-use in-browser Markdown editors. That README will be done in no time.</p>
+
+<h2>Step 4: Our Code</h2>
+
+<p>This is where we throw in our reason for starting the gem in the first place. </p>
+
+<pre>
+  <code>
+    example_gem/
+    ├── bin/
+    │   └── example_gem
+    ├── lib/
+    │   └── example_gem.rb
+    ├── test/
+    │   └── test_example_gem.rb
+    ├── .gitignore
+    ├── example_gem.gemspec
+    ├── Gemfile
+    ├── LICENSE.txt
+    ├── Rakefile
+    └── README.md
+  </code>
+</pre>
+
+<h5>photo credit: <a href="http://www.fieldgemology.org/index.php" id="photo_credit">Vincent Pardieu</a></h5>

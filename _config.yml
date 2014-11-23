@@ -20,6 +20,6 @@ url: walshification.com
 
 paginate: 5
 
-markdown: rdiscount
+markdown: redcarpet
 permalink: pretty
-highlighter: Pygments
+highlighter: pygments

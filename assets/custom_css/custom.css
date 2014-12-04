@@ -47,3 +47,27 @@ p, a {
 #photo_credit {
   font-size: 12px;
 }
+
+.button {
+  display: block;
+  height: 100px;
+  width: 300px;
+  background-color: #428bca;
+  color: #F8F8FF;
+  text-align: center;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+  line-height: 100px;
+  border-radius: 50px;
+  box-shadow: 0 6px 0 #033C6E;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a.button {
+  text-decoration: none;
+
+} 
+
+a.button:hover {
+  background-color: #033C6E;
+}

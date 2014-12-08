@@ -35,10 +35,11 @@ title: "Ruby Gems and How to Make Them"
   <code>
     example_gem/
     ├── lib/
+    │   ├── example_gem
+    │   │   └── version.rb
     │   └── example_gem.rb
     ├── README
     ├── Rakefile
-
     └── example_gem.gemspec
   </code>
 </pre>
@@ -61,7 +62,7 @@ title: "Ruby Gems and How to Make Them"
 
 <h2>Step 4: Our Code</h2>
 
-<p>This is where we throw in our reason for starting the gem in the first place. </p>
+<p>This is where we throw in our reason for starting the gem in the first place. The gem we're making today is an executable on the command line, which means we need a bin folder. "Bin" here stands for "binary," the term for executable files. Going back to the gem file structure, we want to add our bin folder to the root, like so:</p>
 
 <pre>
   <code>
@@ -69,6 +70,8 @@ title: "Ruby Gems and How to Make Them"
     ├── bin/
     │   └── example_gem
     ├── lib/
+    │   ├── example_gem
+    │   │   └── version.rb
     │   └── example_gem.rb
     ├── test/
     │   └── test_example_gem.rb
@@ -80,5 +83,33 @@ title: "Ruby Gems and How to Make Them"
     └── README.md
   </code>
 </pre>
+
+<p>I threw a test folder and file in there as well. Technically speaking, we can write all our code in the example_gem file in the bin folder, since our simple gem will only apply that far, but it's best practice to write your code in the lib/example_gem folder and refer to that from your executable.</p>
+
+<p>For now, let's focus on the executable. Put this line at the top of that file:</p>
+
+<code>#!/usr/bin/env ruby</code>
+<br />
+<br />
+<p>This tells the terminal that the code in here should be run as Ruby code.Jump over to the terminal and run <code>chmod +x bin/example_gem</code>, which changes the bin file from one that is read-and-write only to one that is executable.</p>
+
+<p>I added this code in the executable:</p>
+
+<pre>
+  <code>
+    puts "hey there"
+    puts ""
+    puts "  ('v')"
+    puts "   \\|"
+    puts "    |\\"
+    puts "   / \\"
+  </code>
+</pre>
+
+<h2>Step 5: Commit, Install, Release</h2>
+
+<p>With the code written, add and commit it to github the usual way, <code>git add --all</code> and <code>git commit -m 'initial commit'</code>. If you'd like to test your gem locally, run <code>rake install</code> and <code>rbenv rehash</code>. Rbenv rehash creates shims at the front of your <code>PATH</code> that pass along Ruby commands to rbenv. That accomplished, type our command and behold the glory of your first gem.</p>
+
+<p>Assuming all goes well, create a repo at github and push your code up. Running <code>rake release</code> will upload your gem to RubyGems and make it available to the world. Congratulations! You're one step closer to Ruby mastery.</p>
 
 <h5>photo credit: <a href="http://www.fieldgemology.org/index.php" id="photo_credit">Vincent Pardieu</a></h5>

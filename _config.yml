@@ -1,20 +1,20 @@
-title: "Walshification"
+title: "walshification"
 description: "My coding blog."
 avatar: "https://avatars0.githubusercontent.com/u/5120876?v=2&s=460"
 encoding: utf-8
 
 footer-links:
-  flickr: 
+  flickr:
   github: walshification
-  linkedin: 
-  rss: 
+  linkedin:
+  rss:
   twitter: walshification
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
 
-disqus: walshification
+disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: 
+google_analytics:
 
 url: walshification.com
 

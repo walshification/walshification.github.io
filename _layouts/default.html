@@ -15,43 +15,33 @@
   <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
   <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
   <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
-  <script type="text/javascript">
-  var disqus_shortname = 'walshification';
-
-  (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-  }());
-  </script>
 </head>
 <body>
 	<!-- Navbar -->
 	{% include navbar.html %}
-	
+
 	<div class="container" id="allTheThings">
 		<div class="page-header">
       <img src="/assets/images/header-1024px.jpg" id="header-image" />
     </div>
 		<div class="row">
-	
+
 		<!-- Post content -->
 			<div class="col-md-8">
 				<section class="content">
 					{{ content }}
 				</section>
 			</div>
-		
+
 			<!-- Sidebar -->
 			<div class="col-md-4">
 				{% include sidebar.html %}
 			</div>
 		</div>
-	
+
 	  <!-- Footer -->
 	  {% include footer.html %}
-	
+
   </div>
 </body>
 </html>

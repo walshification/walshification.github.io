@@ -4,10 +4,10 @@ title: "Ruby Gems and How to Make Them"
 ---
 
 <figure align="center">
-  <img title="Winza rubies" alt="A group of Winza ruby and sapphire crystal specimens collected by Vincent Pardieu while visiting the Winza gem mining area in 2008 associated with two beautiful faceted rubies seen in Paris." 
+  <img title="Winza rubies" alt="A group of Winza ruby and sapphire crystal specimens collected by Vincent Pardieu while visiting the Winza gem mining area in 2008 associated with two beautiful faceted rubies seen in Paris."
   src="/assets/images/gems-Winza5499okGG.jpg" />
   <figcaption>
-    
+
   </figcaption>
 </figure>
 
@@ -33,14 +33,14 @@ title: "Ruby Gems and How to Make Them"
 
 <pre>
   <code>
-    example_gem/
-    ├── lib/
-    │   ├── example_gem
-    │   │   └── version.rb
-    │   └── example_gem.rb
-    ├── README
-    ├── Rakefile
-    └── example_gem.gemspec
+  example_gem/
+  ├── lib/
+  │   ├── example_gem
+  │   │   └── version.rb
+  │   └── example_gem.rb
+  ├── README
+  ├── Rakefile
+  └── example_gem.gemspec
   </code>
 </pre>
 
@@ -50,7 +50,33 @@ title: "Ruby Gems and How to Make Them"
 
 <p>Open the gemspec file in your preferred text editor. It'll look something like this:</p>
 
-{% gist 2494dac3ed1d65b7c1e1 %}
+<pre>
+  <code>
+  # coding: utf-8
+  lib = File.expand_path('../lib', __FILE__)
+  $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+  require 'example_gem/version'
+
+  Gem::Specification.new do |spec|
+    spec.name          = "example_gem"
+    spec.version       = ExampleGem::VERSION
+    spec.authors       = ["your_name"]
+    spec.email         = ["your_email@email.com"]
+    spec.summary       = %q{TODO: Write a short summary. Required.}
+    spec.description   = %q{TODO: Write a longer description. Optional.}
+    spec.homepage      = ""
+    spec.license       = "MIT"
+
+    spec.files         = `git ls-files -z`.split("\x0")
+    spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+    spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+    spec.require_paths = ["lib"]
+
+    spec.add_development_dependency "bundler", "~> 1.7"
+    spec.add_development_dependency "rake", "~> 10.0"
+  end
+  </code>
+</pre>
 
 <p>The <code>spec.summary</code> is our first stop. Replace the contents of the curly brackets with a summary of what your gem is designed to do. Expand on that with a more in-depth explanation of its fuctionality in the <code>spec.description</code>. Be sure in both cases to remove the "TODO" as this will create havoc with your gem.</p>
 

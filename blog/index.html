@@ -1,0 +1,14 @@
+---
+layout: default
+title: walshification
+---
+
+
+	<div id="main" role="main">
+		{% for post in paginator.posts %}
+			<a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+			<h4>{{ post.date | date: "%B %-d, %Y" }}</h4>
+			{{ post.content | split: "<!-- more -->" | first }}
+			<a href="{{ post.url }}">Read more ...</a>
+		{% endfor %}
+	</div>

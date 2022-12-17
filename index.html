@@ -36,7 +36,7 @@ title: walshification
     <body>
         <div class="frame">
             <header class="header">
-                <nav class="navbar navbar-expand-lg navbar-light w-100 pb-5">
+                <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="#">walshification</a>
                     <button
                         class="navbar-toggler"
@@ -68,23 +68,32 @@ title: walshification
                 </nav>
             </header>
             <main>
-                <div class="row d-flex mt-5 mb-5">
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="row align-items-center">
-                            <div class="col-sm-12 col-md-5 col-lg-5">
-                                <div>
-                                    <div id="portrait" class="shadow"></div>
-                                </div>
+                <div class="row align-items-center d-flex">
+                    <!-- <div class="row">
+                        <div class="row"> -->
+                            <div class="col-12 col-md-5 col-lg-5 d-flex justify-content-center pt-5">
+                                <!-- <div> -->
+                                    <img src="/assets/images/profile_square.png" id="portrait" class="shadow" />
+                                <!-- </div> -->
                             </div>
-                            <div class="col-sm-12 col-md-7 col-lg-7">
+                            <div class="col-12 col-md-7 col-lg-7 d-flex justify-content-center pt-5">
                                 <div>
                                     <p class="text-muted">Software Engineer</p>
                                     <h1 class="mt-1">Chris Walsh</h1>
-                                    <div id="blurb" class="col pl-0">
-                                        Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.
+                                    <div id="blurb" class="col-12 pl-0">
+                                        <p>
+                                            I'm a principle engineer at <a href="legacy.com">Legacy.com</a>, creating and extending
+                                            data pipelines for our data center and the various APIs that make the data available.
+                                            Lately, we've started rebuilding the site's search engine using AWS's OpenSearch.
+                                            It's pretty cool.
+                                        </p>
+                                        <p>
+                                            I have an English degree in creative writing and a Master's in Writing and Rhetoric.
+                                            You might think I don't know what I'm doing, but that hasn't stopped me yet.
+                                        </p>
                                     </div>
                                     <div class="mt-4">
-                                        <button
+                                        <!-- <button
                                             type="button"
                                             class="btn btn-outline-primary mt-2 shadow"
                                         >
@@ -95,15 +104,15 @@ title: walshification
                                             class="btn btn-outline-primary mt-2 shadow"
                                         >
                                             Contact
-                                        </button>
+                                        </button> -->
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        <!-- </div>
+                    </div> -->
                 </div>
                 <div class="row">
-                    <div class="col mt-5">
+                    <div class="col-12 mt-5">
                         <h2>What I Do</h2>
                     </div>
                 </div>
@@ -118,7 +127,7 @@ title: walshification
                                     <div class="col-10 pl-0">
                                         <h5 class="card-title">Server-side Development</h5>
                                         <p class="card-text">
-                                            With supporting text below as a natural lead-in to additional content.
+                                            Python web applications, APIs, and microservices.
                                         </p>
                                     </div>
                                 </div>
@@ -135,7 +144,7 @@ title: walshification
                                     <div class="col-10 pl-0">
                                         <h5 class="card-title">Client-side Development</h5>
                                         <p class="card-text">
-                                            With supporting text below as a natural lead-in to additional content.
+                                            Happiest in React, but vanilla JS can often get the job done.
                                         </p>
                                     </div>
                                 </div>
@@ -152,7 +161,8 @@ title: walshification
                                     <div class="col-10 pl-0">
                                         <h5 class="card-title">ETL Pipelines</h5>
                                         <p class="card-text">
-                                            With supporting text below as a natural lead-in to additional content.
+                                            Python pipelines using Airflow or just plain ole Python.
+                                            I'm still working on my SQL skills.
                                         </p>
                                     </div>
                                 </div>
@@ -167,9 +177,10 @@ title: walshification
                                         <p><i class="fas fa-drafting-compass fa-2x skill-icons"></i></p>
                                     </div>
                                     <div class="col-10 pl-0">
-                                        <h5 class="card-title">Application Design</h5>
+                                        <h5 class="card-title">DevOps</h5>
                                         <p class="card-text">
-                                            With supporting text below as a natural lead-in to additional content.
+                                            Containerized builds with Docker. Continuous integration pipelines with Jenkins,
+                                            Travis, or whatever framework is next.
                                         </p>
                                     </div>
                                 </div>
@@ -179,9 +190,9 @@ title: walshification
                 </div><!-- What I Do -->
             </main>
             <hr />
-            <footer>
+            <footer class="d-flex justify-content-center">
                 <div class="social-media-links"></div>
-                <div class="copyrights d-flex align-items-end flex-column pt-1 pr-5 pb-3">
+                <div class="copyrights align-items-end flex-column pt-1 pr-5 pb-3">
                     <small class="text-muted">
                         <i class="far fa-copyright pr-1"></i>
                         2022 All rights reserved.

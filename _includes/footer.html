@@ -1,10 +1,31 @@
 <div class="container pt-5">
 	<hr />
-	<footer class="d-flex justify-content-center">
-		<div class="copyrights align-items-end flex-column pt-1 pr-5 pb-3">
-			<small class="text-muted">
-				Copyright <i class="far fa-copyright"></i> 2014 Christopher Walsh. All rights reserved.
-			</small>
-		</div>
+	<footer>
+		<row>
+			<div class="d-flex justify-content-center flex-wrap">
+				{% for social in site.data.social-media %}
+				<div class="col-6 col-sm-2 text-center pb-2">
+					<a
+						rel="me"
+						href="{{ social.url }}"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						<!-- <img src="/assets/icons/{{ social.svg }}" /> -->
+						{% include social-media-icons/{{ social.svg }} %}
+						<span class="align-text-top">{{ social.title }}</span>
+					</a>
+				</div>
+				{% endfor %}
+			</div>
+		</row>
+		<row>
+			<div class="copyrights align-items-end flex-column pt-3">
+				<small class="text-muted">
+					<p class="text-center">Copyright <i class="far fa-copyright"></i> 2022 Christopher Walsh</p>
+					<p class="text-center">All rights reserved.</p>
+				</small>
+			</div>
+		</row>
 	</footer>
 </div>

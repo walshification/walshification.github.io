@@ -1,0 +1,16 @@
+- title: GitHub
+  svg: github.svg
+  url: https://github.com/walshification
+
+- title: Mastodon
+  svg: mastodon.svg
+  url: https://mastodon.social/@walshification
+
+- title: Linkedin
+  verb: Share
+  svg: linkedin.svg
+  url: https://www.linkedin.com/in/walshification
+
+- title: Twitter
+  svg: twitter.svg
+  url: https://twitter.com/walshification
